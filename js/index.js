@@ -10,12 +10,14 @@ var NS_VOLLEY_POINTS = {
         squadra1: {
             punti:0,
             tempi:0,
-            cambi:0
+            cambi:0,
+            set:0
         },
         squadra2: {
             punti:0,
             tempi:0,
-            cambi:0
+            cambi:0,
+            set:0
         }
     },
     
@@ -39,10 +41,35 @@ var NS_VOLLEY_POINTS = {
     },
 
     aggiungiSquadra1: function(){
-        $("#PuntiSquadra1").text(Number($("#PuntiSquadra1").text()) +1)
+        let numberToSet = Number($("#PuntiSquadra1").text()) +1;
+        let puntiAvversari = Number($("#PuntiSquadra2").text());
+        if(numberToSet > 24 && numberToSet > puntiAvversari && numberToSet- puntiAvversari > 1){
+            // console.log("finito set")
+        }
+        $("#PuntiSquadra1").text(numberToSet)
     },
 
     aggiungiSquadra2: function(){
-        $("#PuntiSquadra2").text(Number($("#PuntiSquadra2").text()) +1)
+        let numberToSet = Number($("#PuntiSquadra2").text()) +1;
+        let puntiAvversari = Number($("#PuntiSquadra1").text());
+
+        if(numberToSet > 24 && numberToSet > puntiAvversari && numberToSet- puntiAvversari > 1){
+            // console.log("finito set")
+        }
+        $("#PuntiSquadra2").text(numberToSet)
+    },
+
+    setSquadre: function () {
+
+        $("#squadraCasaH1").text($("#squadraCasa").val().toUpperCase());
+        $("#squadraOspiteH1").text(($("#squadraOspite").val().toUpperCase()));
+
+    },
+    avviaPartita: function(){
+
+        $("#divSetupPartita").addClass("d-none");
+        $("#divPartita").removeClass("d-none");
+
+        NS_VOLLEY_POINTS.setSquadre();
     }
 }

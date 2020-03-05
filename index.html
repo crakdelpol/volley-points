@@ -7,44 +7,69 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body >
-    <div class="container-fluid">
-      <h1 class="text-center">Volley Points</h1>
-      <div class="row pt-5">
+    <div class="container-fluid" id="divSetupPartita">
+        <h1>Setup Partita</h1>
+        <div class="row">
+          <div class="col-sm-4 ">
+            <label>Squadra Casa </label>
+          </div>
+          <div class="col-sm-8">
+            <input type="text" size="50" id="squadraCasa"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <label>Squadra Ospite </label>
+          </div>
+          <div class="col-sm-8">
+            <input type="text" size="50" id="squadraOspite"/>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-8 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary text-center" onclick="NS_VOLLEY_POINTS.avviaPartita()">Avvia</button>
+          </div>
+        </div>
+    </div>
+    <div class="container-fluid d-none" id="divPartita">
+      <div class="row pt-5 height-25-custom" >
         <div class="col-sm-2">
         </div>
         <div class="col-sm-4">
-          <div class="text-center">
-            <input type="text">
+          <div class="row">
+                <h1 class="col-12 d-flex justify-content-center squadre" id="squadraCasaH1"> </h1>
           </div>
-          <h1 class="text-center" id="PuntiSquadra1">0</h1>
+          <div class="row">
+            <input type="button" class="btn-block" value="AGGIUNGI" id="aggiungiSquadra1"/>
+          </div>
+          <div class="row height-12-custom">
+            <h1 class="col-12 d-flex justify-content-center font-large" id="PuntiSquadra1">0</h1>
+          </div>
+          <div class="row">
+            <input type="button" class="btn-block" value="TOGLI" id="togliSquadra1"/>
+          </div>
         </div>
         <div class="col-sm-4">
+          <div class="row">
+              <h1 id="squadraOspiteH1" class="col-12 d-flex justify-content-center squadre"> </h1>
+          </div>
+          <div class="row">
+            <input type="button" class="btn-block" value="AGGIUNGI" id="aggiungiSquadra2"/>
+          </div>
+          <div class="row height-12-custom">
+            <h1 class="col-12 d-flex justify-content-center font-large" id="PuntiSquadra2">0</h1>
+          </div>
+          <div class="row">
+            <input type="button" class="btn-block" value="TOGLI" id="togliSquadra2"/>
+          </div>
           <div  class="text-center">
-            <input type="text">
+            <h1 id=""> </h1>
           </div>
-          <h1 class="text-center" id="PuntiSquadra2">0</h1>
         </div>
         <div class="col-sm-2">
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-2">
-          <input type="button" value="TOGLI" id="togliSquadra1"/>
-        </div>
-        <div class="col-sm-2">
-          <input type="button" value="AGGIUNGI" id="aggiungiSquadra1"/>
-        </div>      
-        <div class="col-sm-2">
-          <input type="button" value="TOGLI" id="togliSquadra2"/>
-        </div>
-        <div class="col-sm-2">
-          <input type="button" value="AGGIUNGI" id="aggiungiSquadra2"/>
-        </div>
-        <div class="col-sm-2">
-        </div>
-      </div>
+
     </div>
     <script  src="js/jquery.js"></script>
     <script  src="js/popper.js"></script>  
