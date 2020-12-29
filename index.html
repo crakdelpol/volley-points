@@ -14,7 +14,7 @@
             <label>Squadra Casa </label>
           </div>
           <div class="col-sm-8">
-            <input type="text" size="50" id="squadraCasa"/>
+            <input type="text" size="50" id="squadraCasa" value="home"/>
           </div>
         </div>
         <div class="row">
@@ -22,7 +22,7 @@
             <label>Squadra Ospite </label>
           </div>
           <div class="col-sm-8">
-            <input type="text" size="50" id="squadraOspite"/>
+            <input type="text" size="50" id="squadraOspite" value="away"/>
           </div>
         </div>
         <div class="row ">
@@ -31,46 +31,105 @@
           </div>
         </div>
     </div>
-    <div class="container-fluid d-none" id="divPartita">
-      <div class="row pt-5 height-25-custom" >
-        <div class="col-sm-2">
+    <div class="container-fluid d-none h-auto" id="divPartita">
+      <div class="row punteggioSet">
+        <div class="col-sm-5">
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-2 d-flex justify-content-center">
+          <h1>0 - 0</h1>
+        </div>
+        <div class="col-sm-5">
+        </div>
+      </div>
+      <div class="row team">
+        <div class="col-sm-5 wrapper-home">
           <div class="row">
+
                 <h1 class="col-12 d-flex justify-content-center squadre" id="squadraCasaH1"> </h1>
           </div>
-          <div class="row">
-            <input type="button" class="btn-block" value="AGGIUNGI" id="aggiungiSquadra1"/>
-          </div>
+
           <div class="row height-12-custom">
-            <h1 class="col-12 d-flex justify-content-center font-large" id="PuntiSquadra1">0</h1>
+            <div class="col-2">
+              <div class="row h-75">
+                <input type="button" class="btn-block" value="+" id="aggiungiSquadra1"/>
+              </div>
+              <div class="row h-25">
+                <input type="button" class="btn-block" value="-" id="togliSquadra1"/>
+              </div>
+            </div>
+            <h1 class="col-10 d-flex justify-content-center font-large" id="PuntiSquadra1">0</h1>
           </div>
-          <div class="row">
-            <input type="button" class="btn-block" value="TOGLI" id="togliSquadra1"/>
+
+        </div>
+        <div class="col-sm-2 ">
+          <div class="row h-33 d-flex justify-content-center align-items-center">
+            <p class="">1st</p>
+          </div>
+          <div class="row h-33 d-flex justify-content-center align-items-center">
+            <input type="button" class="btn-block" value="MENU" id="menu"/>
+          </div>
+          <div class="row h-33 d-flex justify-content-center align-items-center">
+            <p>30</p>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-5 wrapper-away">
           <div class="row">
               <h1 id="squadraOspiteH1" class="col-12 d-flex justify-content-center squadre"> </h1>
           </div>
-          <div class="row">
-            <input type="button" class="btn-block" value="AGGIUNGI" id="aggiungiSquadra2"/>
-          </div>
+
           <div class="row height-12-custom">
-            <h1 class="col-12 d-flex justify-content-center font-large" id="PuntiSquadra2">0</h1>
+            <h1 class="col-10 d-flex justify-content-center font-large" id="PuntiSquadra2">0</h1>
+            <div class="col-2">
+              <div class="row h-75">
+                <input type="button" class="btn-block" value="+" id="aggiungiSquadra2"/>
+              </div>
+              <div class="row h-25">
+                <input type="button" class="btn-block" value="-" id="togliSquadra2"/>
+              </div>
+            </div>
+
           </div>
-          <div class="row">
-            <input type="button" class="btn-block" value="TOGLI" id="togliSquadra2"/>
-          </div>
-          <div  class="text-center">
-            <h1 id=""> </h1>
-          </div>
-        </div>
-        <div class="col-sm-2">
+
         </div>
       </div>
+      <div class="row set">
+        <div class="col-10">
+          <div class="row">
 
+            <div class="col-3 ">
+              <div class="row d-flex justify-content-center">1st</div>
+              <div class="row d-flex justify-content-center">25-14</div>
+            </div>
+            <div class="col-3">
+              <div class="row d-flex justify-content-center">2nd</div>
+              <div class="row d-flex justify-content-center">25-14</div>
+            </div>
+            <div class="col-3">
+              <div class="row d-flex justify-content-center">3rd</div>
+              <div class="row d-flex justify-content-center">25-14</div>
+            </div>
+            <div class="col-3">
+              <div class="row d-flex justify-content-center">4th</div>
+              <div class="row d-flex justify-content-center">25-14</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <input value="next" type="button">
+        </div>
+      </div>
     </div>
+
+    <div class="row d-none " id="menu-dialog">
+      <ul>
+        <li><input type="button" value="score reset"/></li>
+        <li><input type="button" value="reset all"></li>
+        <li><input type="button" value="switch"></li>
+        <li><input type="button" value="timeout 30"></li>
+        <li><input type="button" value="timeout 60"></li>
+      </ul>
+    </div>
+
     <script  src="js/jquery.js"></script>
     <script  src="js/popper.js"></script>  
     <script  src="js/bootstrap/bootstrap.min.js"></script>
